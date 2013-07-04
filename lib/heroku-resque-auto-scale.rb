@@ -1,16 +1,16 @@
-require 'heroku'
+require 'heroku-api'
 
 module HerokuResqueAutoScale
   module Scaler
     class << self
-      @@heroku = Heroku::Client.new(ENV['HEROKU_USER'], ENV['HEROKU_PASSWORD'])
+      @@heroku = Heroku::API.new(:api_key => ENV['HEROKU_API_KEY'])
 
       def workers
-        @@heroku.info(ENV['HEROKU_APP'])[:workers].to_i
+        @@heroku.get_app(ENV['HEROKU_APP']).data[:body]['workers'].to_i
       end
 
       def workers=(qty)
-        @@heroku.ps_scale(ENV['HEROKU_APP'], :type => :worker, :qty => qty)
+        @@heroku.post_ps_scale(ENV['HEROKU_APP'], 'worker', qty)
       end
 
       def job_count
