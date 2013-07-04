@@ -13,12 +13,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "heroku-resque-auto-scale"
-  gem.homepage = "http://github.com/mirthlab/heroku-resque-auto-scale"
+  gem.homepage = "http://github.com/danhixon/heroku-resque-auto-scale"
   gem.license = "MIT"
   gem.summary = %Q{Auto scale your resque workers on Heroku.}
   gem.description = %Q{Auto scale your resque workers on Heroku.}
-  gem.email = "mark@mirthlab.com"
-  gem.authors = ["Mark Quezada"]
+  gem.email = "danhixon@gmail.com"
+  gem.authors = ["Mark Quezada", "Dan Hixon"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'

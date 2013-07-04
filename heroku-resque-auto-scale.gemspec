@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = "heroku-resque-auto-scale"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Mark Quezada"]
+  s.authors = ["Mark Quezada", "Dan Hixon"]
   s.date = "2013-07-04"
   s.description = "Auto scale your resque workers on Heroku."
-  s.email = "mark@mirthlab.com"
+  s.email = "danhixon@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_heroku-resque-auto-scale.rb"
   ]
-  s.homepage = "http://github.com/mirthlab/heroku-resque-auto-scale"
+  s.homepage = "http://github.com/danhixon/heroku-resque-auto-scale"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.25"
